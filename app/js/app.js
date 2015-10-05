@@ -6,13 +6,12 @@ angular.module('meizi', ['ngRoute', 'ngAnimate'])
           templateUrl: 'part/meizi-list.html',
           controller: 'Meizis',
           controllerAs: 'meizis'
+        })
+        .otherwise({
+          redirectTo: '/Meizis'
         });
-        // .otherwise({
-        //   redirectTo: '/Meizis'
-        // })
       // configure html5 to get links working on jsfiddle
       $locationProvider.html5Mode(true);
-      //设置material主题色
   }])
   .controller('MainCtrl', ['$route', '$routeParams', '$location',
     function($route, $routeParams, $location) {

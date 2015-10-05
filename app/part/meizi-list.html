@@ -2,8 +2,16 @@
   <div class="col-lg-6 col-lg-push-3">
       <div class="card" ng-repeat="meizi in meizis">
         <div class="card-main">
+          <div class="card-header">
+            <div class="card-inner">
+              <span>Hello</span>
+            </div>
+          </div>
           <div class="card-img">
               <img ng-src="{{meizi.url}}" style="width: 100%;">
+          </div>
+          <div class="card-inner">
+            <p>{{meizi.who}}</p>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
-angular.module('meizi', ['ngRoute', 'ngAnimate'])
-  .config(['$routeProvider', '$locationProvider',
-    function($routeProvider, $locationProvider) {
+angular.module('meizi', ['ngRoute', 'ngAnimate', 'ngMaterial'])
+  .config(['$routeProvider', '$locationProvider', '$mdThemingProvider',
+    function($routeProvider, $locationProvider, $mdThemingProvider) {
       $routeProvider
         .when('/Meizis', {
           templateUrl: 'part/meizi-list.html',
@@ -12,6 +12,10 @@ angular.module('meizi', ['ngRoute', 'ngAnimate'])
         // })
       // configure html5 to get links working on jsfiddle
       $locationProvider.html5Mode(true);
+      //设置material主题色
+      $mdThemingProvider.theme('default').primaryPalette('pink')
+        .accentPalette('orange');
+
   }])
   .controller('MainCtrl', ['$route', '$routeParams', '$location',
     function($route, $routeParams, $location) {

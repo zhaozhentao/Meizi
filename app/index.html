@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html ng-app="meizi">
 <head>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="initial-scale=1.0, width=device-width" name="viewport">
   <title></title>
   <script src="../bower_components/angular/angular.js"></script>
   <script src="../bower_components/angular-route/angular-route.js"></script>  
@@ -9,28 +11,28 @@
   <script src="js/app.js"></script>
   <script src="../bower_components/angular-material/angular-material.js"></script>
   <link href="../bower_components/angular-material/angular-material.css" rel="stylesheet">
+  <link href="../material-master/css/base.min.css" rel="stylesheet">
+  <link href="../material-master/css/project.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="../material-master/js/base.min.js"></script>
+  <script src="../material-master/js/project.min.js"></script>  
   <base href="/app/index.html">
 </head>
 <body>
+  <header class="header header-brand  header-waterfall">
+    <ul class="nav nav-list pull-left">
+      <li>
+        <a data-toggle="menu" href="#menu">
+          <span class="icon icon-lg">menu</span>
+        </a>
+      </li>
+    </ul>
+    <a class="header-logo margin-left-no" href="Meizis">Meizi</a>
+  </header>
 
-  <md-content class="md-default-theme">
-    <md-toolbar class="md-default-theme">
-      <div class="md-toolbar-tools">
-        <md-button class="md-icon-button" aria-label="Settings">
-        <md-icon md-svg-icon="../bower_components/angular-material/demos/toolbar/demoBasicUsage/img/icons/menu.svg"></md-icon>
-        </md-button>
-        <h2>
-          <a href="Meizis">Meizi</a>
-        </h2>
-      </div>
-    </md-toolbar>
+  <md-content style="margin-top: 64px;">
+    <div ng-view class="view-animate"></div>
   </md-content>
-
-  <div ng-controller="MainCtrl as main" style="margin-top: 55px;">
-    <div class="view-animate-container">
-      <div ng-view class="view-animate"></div>
-    </div>
-  </div>
 
 </body>
 </html>

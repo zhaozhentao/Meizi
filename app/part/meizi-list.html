@@ -1,16 +1,20 @@
 <div>
-  <div class="col-md-6 col-md-offset-3">
-    <ul style="list-style-type: none; width: 400px; margin: 0 auto;">
-      <li ng-repeat="meizi in meizis">
-        <div class="panel panel-default">
-          <div class="panel-body" style="padding: 0px;">
-            <img ng-src="{{meizi.url}}" style="width: 100%">
-            <p style="margin: 15px;">
-              {{meizi.who}}
-            </p>
-          </div>
-        </div>
-      </li>
-    </ul>
+  <div layout="row">
+    <div flex="33" offset="33">
+      <md-list>
+        <md-list-item ng-repeat="meizi in meizis">
+          <md-card>
+            <img ng-src="{{meizi.url}}" class="md-card-image" alt="Washed Out">
+            <md-card-content>
+              <h2 class="md-title">{{meizi.who}}</h2>
+            </md-card-content>
+            <div class="md-actions" layout="row" layout-align="end center">
+              <md-button>Action 1</md-button>
+              <md-button>Action 2</md-button>
+            </div>
+          </md-card>          
+        </md-list-item>
+      </md-list> 
+    </div>
   </div>
 </div>

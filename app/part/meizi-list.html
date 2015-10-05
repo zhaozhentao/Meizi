@@ -1,20 +1,13 @@
-<div>
-  <div layout="row">
-    <div flex="33" offset="33">
-      <md-list>
-        <md-list-item ng-repeat="meizi in meizis">
-          <md-card>
-            <img ng-src="{{meizi.url}}" class="md-card-image" alt="Washed Out">
-            <md-card-content>
-              <h2 class="md-title">{{meizi.who}}</h2>
-            </md-card-content>
-            <div class="md-actions" layout="row" layout-align="end center">
-              <md-button>Action 1</md-button>
-              <md-button>Action 2</md-button>
-            </div>
-          </md-card>          
-        </md-list-item>
-      </md-list> 
-    </div>
-  </div>
+<div class="col-md-12">
+  <ul style="list-style-type: none;">
+    <li ng-repeat="meizi in meizis">
+      <div class="card">
+        <div class="card-main">
+          <div class="card-img">
+              <img ng-src="{{meizi.url}}">
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>

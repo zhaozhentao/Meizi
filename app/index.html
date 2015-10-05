@@ -13,7 +13,7 @@
   <link href="../bower_components/angular-material/angular-material.css" rel="stylesheet">
   <link href="../material-master/css/base.min.css" rel="stylesheet">
   <link href="../material-master/css/project.min.css" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/jquery/jquery.min.js"></script>
   <script src="../material-master/js/base.min.js"></script>
   <script src="../material-master/js/project.min.js"></script>  
   <base href="/app/index.html">
@@ -30,9 +30,11 @@
     <a class="header-logo margin-left-no" href="Meizis">Meizi</a>
   </header>
 
-  <md-content style="margin-top: 64px;">
-    <div ng-view class="view-animate"></div>
-  </md-content>
+  <div class="content" style="margin-top: 55px;">
+    <div class="container">
+      <div ng-view class="view-animate"></div>
+    </div>
+  </div>
 
 </body>
 </html>

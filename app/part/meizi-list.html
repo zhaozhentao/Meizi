@@ -1,2 +1,16 @@
-<h1>{{meizi}}</h1>
-
+<div>
+  <div class="col-md-6 col-md-offset-3">
+    <ul style="list-style-type: none;">
+      <li ng-repeat="meizi in meizis">
+        <div class="panel panel-default">
+          <div class="panel-body" style="padding: 0px;">
+            <img ng-src="{{meizi.url}}" style="width: 100%">
+            <p style="margin: 15px;">
+              {{meizi.who}}
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

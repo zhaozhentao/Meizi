@@ -6,10 +6,10 @@ angular.module('meizi', ['ngRoute', 'ngAnimate'])
           templateUrl: 'part/meizi-list.html',
           controller: 'Meizis',
           controllerAs: 'meizis'
-        })
-        .otherwise({
-          redirectTo: '/Meizis'
-        })
+        });
+        // .otherwise({
+        //   redirectTo: '/Meizis'
+        // })
       // configure html5 to get links working on jsfiddle
       $locationProvider.html5Mode(true);
   }])
@@ -19,8 +19,11 @@ angular.module('meizi', ['ngRoute', 'ngAnimate'])
       this.$location = $location;
       this.$routeParams = $routeParams;
   }])
-  .controller('Meizis', ['$scope', '$routeParams', function($scope, $routeParams) {
+  .controller('Meizis', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
     this.name = "Mezis";
     this.params = $routeParams;
-    $scope.meizi = "cyndi";
+    $http.get('/app/data/meizis.json')
+      .success(function(data){
+        $scope.meizis = data.results;
+      });
   }]);

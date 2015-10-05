@@ -12,6 +12,6 @@ app.config(['$routeProvider', function($routeProvider){
 }]);
 
 app.controller('MeiziListCtrl', ['$scope', function($scope){
-
+  $scope.meizi = "cyndi";
 }]);
 
